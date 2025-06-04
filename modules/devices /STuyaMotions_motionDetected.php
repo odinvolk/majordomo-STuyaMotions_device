@@ -55,11 +55,11 @@ if ($linked_room) {
 //https://connect.smartliving.ru/profile/3195/blog/datchiki-dvijeniya-rabotayut-kak-sistema-bezopasnosti-doma.html
 $status=$this->getProperty('status');
 
-if (gg('SecurityArmedMode.active')==1) 
-{if ($status == 1)  
- $this->setProperty('alarm', LANG_DEVICES_PENETRATION_INTO_THE_ROOM);
+if (gg('SecurityArmedMode.active')==1) {
+    if ($status == 1)  
+    $this->setProperty('alarm', LANG_DEVICES_PENETRATION_INTO_THE_ROOM);
 }
-if (gg('SecurityArmedMode.active')==0) 
-{if ($status == 1)  
- $this->setProperty('alarm', LANG_DEVICES_PROTECTION_DISABLED_SENSOR_IN_OPERATING_STATE);
+if (gg('SecurityArmedMode.active')==0) {
+    if ($status == 1)  
+    $this->setProperty('alarm', LANG_DEVICES_PROTECTION_DISABLED_SENSOR_IN_OPERATING_STATE);
 }
